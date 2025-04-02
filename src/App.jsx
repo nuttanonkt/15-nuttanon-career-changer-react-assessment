@@ -1,8 +1,10 @@
 import React from "react";
 import Navbar from "./component/Navbar";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./pages/Home";
 import Owner from "./pages/Owner";
+import Admin from "./pages/Admin";
+import User from "./pages/User";
+import Home from "./pages/Home";
 
 const router = createBrowserRouter([
   {
@@ -10,12 +12,20 @@ const router = createBrowserRouter([
     element: <Navbar />,
 
     children: [
-      { 
-        path: "/", 
+      {
+        path:"/",
         element: <Home />,
       },
       {
-        path: "Owner",
+        path:"admin",
+        element: <Admin />,
+      },
+      {
+        path:"user",
+        element: <User />,
+      },
+      {
+        path:"owner",
         element: <Owner />,
       },
     ],
